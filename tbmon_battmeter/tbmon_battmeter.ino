@@ -25,7 +25,7 @@ void setup() {
   // Configure reciving address. 
   Mirf.setRADDR((byte *)"volt1");
 
-  Mirf.payload = sizeof(unsigned long);
+  Mirf.payload = sizeof(float);
 
   /*
    * To change channel:
@@ -81,6 +81,6 @@ void loop() {
   Mirf.getData((byte *) &voltsA);
   Serial.println(voltsA);
   
-  delay(10000);
+  delay(1000);
 }
 
