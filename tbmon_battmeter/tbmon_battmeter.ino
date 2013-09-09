@@ -1,5 +1,10 @@
-// Requires Arduino IDE and MIRF library
-// MIRF lib: https://github.com/aaronds/arduino-nrf24l01/tree/master/Mirf
+/* Requires Arduino IDE and MIRF library
+ * MIRF lib: https://github.com/aaronds/arduino-nrf24l01/tree/master/Mirf
+ * NOTE: It may be necessary to modify MirfHardwareSpiDriver.cpp with; 
+ * SPI.setClockDivider(SPI_CLOCK_DIV2);
+ * to increase stability. 
+ */
+ 
 #include <SPI.h>
 #include <Mirf.h>
 #include <nRF24L01.h>
